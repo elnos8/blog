@@ -3,6 +3,7 @@ import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getPostBySlug, getAllSlugs } from "@/lib/posts";
 import { mdxComponents } from "@/components/MdxComponents";
+import { mdxOptions } from "@/lib/mdx";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -30,7 +31,11 @@ export default async function PostPage({ params }: PageProps) {
         ← Back
       </Link>
       <div className="prose prose-stone dark:prose-invert prose-lg">
-        <MDXRemote source={post.content} components={mdxComponents} />
+        <MDXRemote
+          source={post.content}
+          components={mdxComponents}
+          options={{ mdxOptions }}
+        />
       </div>
     </article>
   );
