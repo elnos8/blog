@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   title: "elnos",
@@ -14,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className={inter.variable}>
       <body className="min-h-screen flex flex-col">
         <script
           dangerouslySetInnerHTML={{
@@ -22,7 +29,7 @@ export default function RootLayout({
           }}
         />
         <Header />
-        <main className="flex-1 w-full max-w-[45rem] mx-auto px-6 py-12">
+        <main className="flex-1 w-full max-w-3xl mx-auto px-6 py-12 sm:px-8">
           {children}
         </main>
         <Footer />

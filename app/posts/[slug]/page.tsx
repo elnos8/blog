@@ -22,14 +22,14 @@ export default async function PostPage({ params }: PageProps) {
   }
 
   return (
-    <article className="space-y-6">
+    <article className="space-y-8">
       <Link
         href="/"
-        className="text-sm text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-300 transition-colors"
+        className="inline-block text-sm text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-300 transition-colors"
       >
         ← Back
       </Link>
-      <div className="prose prose-stone dark:prose-invert max-w-none">
+      <div className="prose prose-stone dark:prose-invert prose-lg">
         <MDXRemote source={post.content} components={mdxComponents} />
       </div>
     </article>

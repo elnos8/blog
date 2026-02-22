@@ -12,7 +12,7 @@ export default function HomePage() {
 
   return (
     <article>
-      <div className="prose prose-stone dark:prose-invert max-w-none">
+      <div className="prose prose-stone dark:prose-invert prose-lg">
         <MDXRemote source={post.content} components={mdxComponents} />
       </div>
     </article>

@@ -4,7 +4,7 @@ import DarkModeToggle from "./DarkModeToggle";
 export default function Header() {
   return (
     <header className="w-full border-b border-stone-200 dark:border-stone-800 bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur supports-[backdrop-filter]:bg-stone-50/60 dark:supports-[backdrop-filter]:bg-stone-950/60 sticky top-0 z-10">
-      <div className="max-w-[45rem] mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-3xl mx-auto px-6 sm:px-8 py-4 flex items-center justify-between">
         <Link
           href="/"
           className="font-serif text-xl text-stone-900 dark:text-stone-100 hover:opacity-80 transition-opacity flex flex-col sm:flex-row sm:items-baseline sm:gap-2"
